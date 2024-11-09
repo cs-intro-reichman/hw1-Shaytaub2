@@ -12,22 +12,30 @@ public class TimeFormat {
 		{
 			time = "" + minutes;
 		}
+		if (hours==12)
+		{
+			time = hours + ":" + time + " PM";
+		}
+		else
+		{
 		if (hours>=1 && hours <=11)
 		{
 			time = hours + ":" + time + " AM";
 		}
 		else
-		{
-			if(hours == 0)
 			{
-				time = hours + ":" + time + " AM";
+				if(hours == 0)
+				{
+					time = hours + ":" + time + " AM";
+				}
+				else 
+				{
+					hours = hours-12;
+					time = hours + ":" + time + " PM";
+				}
 			}
-			else 
-			{
-				hours = hours-12;
-				time = hours + ":" + time + " PM";
-			}
-		}
 		System.out.println(time);
 	}
 }
+}
+
