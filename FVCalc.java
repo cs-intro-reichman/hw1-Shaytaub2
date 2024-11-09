@@ -6,6 +6,6 @@ public class FVCalc {
 		int years = Integer.parseInt (args [2]); // in the hw page 'n' is the number of years.
 		double f = currentValue*Math.pow((rate/100+1),years); //temp integer for the formula.
 		int futureValue = (int) f;
-		System.out.println("After " + years + " years, $" + currentValue + " saved at " + rate + "% will yeald $" + futureValue + " ");
+		System.out.println("After " + years + " years, a $" + currentValue + " saved at " + rate + "% will yeald $" + futureValue + " ");
 	}
 }
