@@ -18,24 +18,24 @@ public class TimeFormat {
 		}
 		else
 		{
-		if (hours>=1 && hours <=11)
-		{
-			time = hours + ":" + time + " AM";
-		}
-		else
+			if (hours>=1 && hours<=11)
 			{
-				if(hours == 0)
+				time = hours + ":" + time + " AM";
+			}
+			else
 				{
-					time = hours + ":" + time + " AM";
-				}
-				else 
-				{
-					hours = hours-12;
-					time = hours + ":" + time + " PM";
+					if(hours == 0)
+					{
+						time = hours + ":" + time + " AM";
+					}
+						else 
+					{
+							hours = hours-12;
+							time = hours + ":" + time + " PM";
+					}
 				}
 			}
 		System.out.println(time);
 	}
-}
 }
 
